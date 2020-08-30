@@ -18,7 +18,12 @@ const usePost = () => {
                                     ...GatsbyImageSharpFluid_withWebp
                                 }
                             }
-                        }                           
+                        }                                              
+                    }
+                    fields{
+                        readingTime{
+                        text
+                        }
                     }
                     excerpt
                 }
