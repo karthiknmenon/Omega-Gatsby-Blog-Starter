@@ -33,7 +33,7 @@ const Card = () => {
         <>
         {data.allMdx.nodes.map(object => (
             <Link to={object.frontmatter.slug} key = {object.frontmatter.title}>
-                <div className="max-w-sm w-full mb-5 lg:max-w-full lg:flex hover:shadow-lg">
+                <div className="max-w-sm w-full mb-5 transition delay-150 duration-300 ease-in-out lg:max-w-full lg:flex hover:shadow-lg">
                     <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
                     <Img fluid={object.frontmatter.image.childImageSharp.fluid} alt={object.title}/>
                     </div>
