@@ -22,8 +22,11 @@ const Card = () => {
                             {/* <img className="w-10 h-10 rounded-full mr-4" src={} alt={object.frontmatter.author} /> */}
                             <div className="text-sm">
                                 <p className="text-gray-900 leading-none">{object.frontmatter.author}</p>
+                            </div>                           
+                        </div>
+                        <div className="w-100 flex justify-between text-sm">
+                                <p className="text-gray-600">{object.fields.readingTime.text}</p>
                                 <p className="text-gray-600">{object.frontmatter.date}</p>
-                            </div>
                         </div>
                     </div>
                 </div>

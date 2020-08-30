@@ -29,6 +29,7 @@ module.exports = {
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
       },
     },
+    'gatsby-remark-reading-time',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
