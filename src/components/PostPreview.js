@@ -4,6 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Helmet from 'react-helmet';
 import Layout from '../components/layout';
 import Img from "gatsby-image";
+import Comments from "./Comments";
 
 export const query = graphql`
   query($slug: String!) {
@@ -37,7 +38,8 @@ const Post = ({ data: { mdx: post } }) => {
       </div>
       <h1 className="font-serif text-3xl font-bold tracking-tight">{post.frontmatter.title}</h1>
       <h5 className="font-self text-md font-bold tracking-tight text-gray-500 mb-5">{post.frontmatter.author}</h5>      
-      <MDXRenderer className="font-serif">{post.body}</MDXRenderer>      
+      <MDXRenderer className="font-serif">{post.body}</MDXRenderer>    
+      <Comments post = {post.frontmatter.slug}/>  
     </Layout>
   );
 };

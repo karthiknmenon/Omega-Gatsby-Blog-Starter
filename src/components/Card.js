@@ -1,34 +1,10 @@
 import React from "react";
-import {useStaticQuery, graphql, Link} from "gatsby";
+import {Link} from "gatsby";
 import Img from "gatsby-image";
+import usePost from "../hooks/usePost"
 
 const Card = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            allMdx{
-                nodes{
-                    frontmatter{
-                        title
-                        author
-                        date
-                        slug
-                        image {
-                            childImageSharp {
-                                fluid(
-                                    maxWidth: 100
-                                    maxHeight: 100
-                                ) {
-                                    ...GatsbyImageSharpFluid_withWebp
-                                }
-                            }
-                        }                           
-                    }
-                    excerpt
-                }
-            }
-        }
-    `);
-    console.log(data.allMdx.nodes)
+    const data = usePost();    
     return(
         <>
         {data.allMdx.nodes.map(object => (
