@@ -39,7 +39,7 @@ const Post = ({ data: { mdx: post } }) => {
       <h1 className="font-serif text-3xl font-bold tracking-tight">{post.frontmatter.title}</h1>
       <h5 className="font-self text-md font-bold tracking-tight text-gray-500 mb-5">{post.frontmatter.author}</h5>      
       <MDXRenderer className="font-serif">{post.body}</MDXRenderer>    
-      <Comments post = {post.frontmatter.slug}/>  
+      <Comments post = {post.frontmatter.slug} postTile = {post.frontmatter.title} className/>        
     </Layout>
   );
 };
